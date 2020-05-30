@@ -4,7 +4,7 @@ var ground, invisibleGround, groundImage;
 var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
-var score;
+var score=0;;
 
 
 function preload(){
@@ -50,7 +50,7 @@ function draw() {
   score = score + Math.round(getFrameRate()/60);
   text("Score: "+ score, 500,50);
   
-  if(keyDown("space")) {
+  if(keyDown("space")&& trex.y >=159) {
     trex.velocityY = -10;
   }
   
